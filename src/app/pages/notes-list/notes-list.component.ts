@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotesListComponent implements OnInit {
 
+  cardTitle:string='deneme1';
+  bodyContent:string='asdasd lorem5'
   constructor() { }
 
   ngOnInit() {
