@@ -13,13 +13,17 @@
   </div>
 
   <div class="notes-list">
-    <app-note-card  [title]="cardTitle" [body]="bodyContent"></app-note-card>
-    <app-note-card></app-note-card>
-    <app-note-card></app-note-card>
+    <app-note-card
+     *ngFor="let note of notes ; index as i"
+     [routerLink]="i"
+      [title]="note.title"
+      [body]="note.body">
+    </app-note-card>
+    
   </div>
 
   <div class="add-button-container">
-    <button class="add-button">+ Add</button>
+    <button class="button add-button" routerLink="new">+ Add</button>
   </div>
 
 </div>
